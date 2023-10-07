@@ -94,3 +94,21 @@ void buzz_always_on(Buzzer_type *buzzer_work, unsigned char mode)
     else
         buzzer_work->always_on = 0;
 }
+
+unsigned char mute(void)
+{
+    struct buzzer_struct xdata *buzzer_temp = buzzerlist_head;
+
+    if (buzzer_temp == NULL)
+        return 0;
+    while (1)
+    {
+        buzzer_temp->times = 0;
+        buzzer_temp->status = 0;
+        buzzer_temp->always_on = 0;
+        if (buzzer_temp->next == NULL)
+            break;
+        buzzer_temp = buzzer_temp->next;
+    }
+    return 0;
+}
