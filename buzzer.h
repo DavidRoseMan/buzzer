@@ -20,6 +20,7 @@ unsigned char addto_buzzerlist(Buzzer_type *buzzer_add);
 bit buzzer_running(void);
 void buzz(Buzzer_type *buzzer_work, unsigned char times);
 void buzz_always_on(Buzzer_type *buzzer_work, unsigned char mode); // mode: 1-----on  0-----off
+unsigned char mute(void);
 
 // larger priority_number means higher priority
 
