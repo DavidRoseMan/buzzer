@@ -11,5 +11,6 @@ void buzz(Buzzer_type *buzzer_work, unsigned char times);
 //let the buzzer buzz times.
 void buzz_always_on(Buzzer_type *buzzer_work, unsigned char mode);
 //let the buzzer always buzz on or buzz off. mode: 1: buzzer is on, 0: buzzer is off.
-
+unsigned char mute(void);
+//mute all the buzzers.
 ```
